@@ -1,0 +1,36 @@
+{
+	"name": "Rettiwt-Auth-REST-API",
+	"version": "1.0.0",
+	"description": "A REST-API wrapper over Rettiwt-Auth",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc",
+		"prepare": "tsc",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"docs": "typedoc --excludePrivate --excludeProtected --excludeInternal src/index.ts",
+		"debug": "nodemon ./dist/index.js --inspect=0.0.0.0:9229"
+	},
+	"repository": "git@github.com:Rishikant181/Rettiwt-Auth-REST-API.git",
+	"author": "Rishikant181 <rishikantsahu181@gmail.com>",
+	"license": "MIT",
+	"engines": {
+		"node": "^20.11.1"
+	},
+	"packageManager": "yarn@4.4.0+sha256.5f228cb28f2edb97d8c3b667fb7b2fdcf06c46798e25ea889dad9e0b4bc2e2c1",
+	"dependencies": {
+		"rettiwt-auth": "2.1.0"
+	},
+	"devDependencies": {
+		"@types/node": "20.4.1",
+		"@typescript-eslint/eslint-plugin": "6.0.0",
+		"@typescript-eslint/parser": "6.0.0",
+		"eslint": "8.44.0",
+		"eslint-plugin-import": "2.29.1",
+		"eslint-plugin-tsdoc": "0.2.17",
+		"nodemon": "2.0.20",
+		"prettier": "3.0.0",
+		"typedoc": "0.24.8",
+		"typescript": "5.1.6"
+	}
+}

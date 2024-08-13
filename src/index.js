@@ -1,5 +1,6 @@
-import express, { Request } from 'express';
-import { AccountCredential, Auth } from 'rettiwt-auth';
+const express = require('express');
+const { Request } = require('express');
+const { AccountCredential, Auth } = require('rettiwt-auth');
 
 // Initializing a new Express app
 const app = express();
@@ -13,14 +14,14 @@ app.use('/up', (req, res) => {
 });
 
 // Endpoint for logging in
-app.post('/login', (req: Request<undefined, { apiKey?: string }, AccountCredential>, res) => {
+app.post('/login', (req, res) => {
 	// Getting login credentials
-	const credentials: AccountCredential = req.body;
+	const credentials = req.body;
 
 	// Logging in and getting API_KEY
 	new Auth()
 		.getUserCredential(credentials)
-		.then((data) => res.json({ apiKey: Buffer.from(data.toHeader().cookie as string).toString('base64') }))
+		.then((data) => res.json({ apiKey: Buffer.from(data.toHeader().cookie).toString('base64') }))
 		.catch(() => res.json({ apiKey: undefined }));
 });
 

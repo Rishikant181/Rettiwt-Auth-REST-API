@@ -1,0 +1,7 @@
+{
+	"actorSpecification": 1,
+	"name": "Rettiwt-Auth-REST-API",
+	"version": "0.0",
+	"buildTag": "latest",
+	"environmentVariables": {}
+}

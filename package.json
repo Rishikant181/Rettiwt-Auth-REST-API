@@ -19,9 +19,11 @@
 	},
 	"packageManager": "yarn@4.4.0+sha256.5f228cb28f2edb97d8c3b667fb7b2fdcf06c46798e25ea889dad9e0b4bc2e2c1",
 	"dependencies": {
+		"express": "^4.19.2",
 		"rettiwt-auth": "2.1.0"
 	},
 	"devDependencies": {
+		"@types/express": "^4",
 		"@types/node": "20.4.1",
 		"@typescript-eslint/eslint-plugin": "6.0.0",
 		"@typescript-eslint/parser": "6.0.0",
